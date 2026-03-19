@@ -1,0 +1,13 @@
+-- CK删除数据
+SELECT COUNT(1) from cdp_service.dwd_cdp_member_tag_define where create_user_name ='mq01'
+
+SELECT * from cdp_service.dwd_member_tags where dwd_cdp_member_tag_value_rule_id in (
+SELECT id from cdp_service.dwd_cdp_member_tag_value_rule where create_user_name ='mq01'
+)
+
+SELECT * from cdp_service.dws_member_tags_summary where dwd_cdp_member_tag_value_rule_id in (
+SELECT id from cdp_service.dwd_cdp_member_tag_value_rule where create_user_name ='mq01'
+)
+
+SELECT * from cdp_service.dwd_cdp_member_tag_value_rule where create_user_name ='mq01'
+
