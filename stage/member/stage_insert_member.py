@@ -3,7 +3,7 @@ import time
 import random
 from datetime import datetime, date
 
-
+# 生成手机号
 def generate_random_mobile(prefix="176", suffix="-M", total_length=11):
     """生成固定前缀和后缀的随机手机号。"""
     body_length = total_length - len(prefix)
